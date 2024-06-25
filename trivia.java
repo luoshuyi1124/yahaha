@@ -60,7 +60,6 @@ public class trivia {
         if(answer3.toLowerCase().equals("hint")) {
 
             System.out.println("Read the code or get the book bruh :/ Try again:");
-            scanner.nextLine();
             String answer4 = scanner.nextLine();
             if(answer4.toLowerCase().equals(Answer3)) {
                 System.out.println("You are correct.");
