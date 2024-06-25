@@ -28,5 +28,10 @@ public class test {
 
         System.out.println(Math.max(x, y));
 
+
+        String stringshenanigans = "The fitnezz gram pacer test...";
+        System.out.println(stringshenanigans);
+        
+
     }
 }
