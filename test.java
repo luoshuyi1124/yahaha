@@ -71,8 +71,60 @@ public class test {
         int loan = 370;
         float interestRate = 0.05134f;
         
-        float interest = loan * interestRate;
+        float interest = loan * interestRate; //can make float from float * int, cannot make int from float * int
         System.out.println(interest);
+
+        float ya = 50.5f * 20.6f;
+        System.out.println(ya);
+
+        float ye = (int)50.5f * 20.6f; //different from example above bc 50.5 is cast as int before its multiplied and recast as float
+        System.out.println(ye);
+
+        System.out.println("---------- ternary operator below");
+
+    //ternary operator (alternative way to write an if statement)
+        int exam = 65;
+        int gift = 0;
+
+        if (exam >= 50) {
+            gift = 10;
+        } else {
+            gift = 0;
+        } //this is standard if/else statement
+        System.out.println(gift);
+
+        gift = (exam >= 50) ? 10 : 0; //this is a ternary operator
+        System.out.println(gift);
+
+        System.out.println("---------- arrays below");
+
+    //arrays (yippee)
+        String[] questions = new String[3];
+        questions[0] = "Question 1: What is 1 + 1 = ?";
+        questions[1] = "Question 2: What color is Pikachu";
+        questions[2] = "Question 3: In the third panel of page 87 of Dungeon Meshi volume 8, what does Chilchuck say?";
+
+        String[] answers = new String[3];
+        answers[0] = "2";
+        answers[1] = "yellow";
+        answers[2] = "do i look like i could eat a kilo?";
+
+        System.out.println(questions[0]);
+        System.out.println(answers[0]);
+
+        questions[0] = "what that fuck are you?";
+        System.out.println(questions[0].length()); //things in an array can be easily changed
+        //note: arrays have a fixed size; for unfixed size, use ArrayList which is also not confined to one date type
+        
+        System.out.println("---------- loops below");
+
+    //loops
+        System.out.println("0");
+        System.out.println("0");
+        System.out.println("0");
+        System.out.println("0");
+        System.out.println("0");
+        System.out.println("0");
 
     }
 }
