@@ -123,10 +123,7 @@ public class test {
             System.out.println(i);
         }
 
-        for (int i = 0; i < questions.length; i++) {
-            System.out.println(questions[i]);
-            System.out.println(answers[i]);
-        }
+        doOnce(questions, answers);
 
         //foreach
         for(String question : questions) {
@@ -151,13 +148,19 @@ public class test {
         scanner.close();
     }
 
-    public static void outputQuestionsAndAnswersXTimes (int x, String[] questions, String[] answers) { //inside parentheses are parameters
-        for (int y = 0; y < x; y++) {
-            for (int i = 0; i < questions.length; i++) { //questions and answers will stay redlined until they are added in the parameter
-                System.out.println(questions[i]);
-                System.out.println(answers[i]);
-            }
+    public static void outputQuestionsAndAnswersXTimes (int times, String[] questions, String[] answers) { //inside parentheses are parameters
+        for (int y = 0; y < times; y++) {
+            doOnce(questions, answers);
             System.out.println("**********");
         }
+        //note: right-click and rename symbol to mass rename a variable
+    }
+
+    public static void doOnce(String[] questions, String[] answers) {
+        for (int i = 0; i < questions.length; i++) { //questions and answers will stay redlined until they are added in the parameter
+            System.out.println(questions[i]);
+            System.out.println(answers[i]);
+        }
+        //note: this was extracted as a method via Refactor --> Extract to method
     }
 }
