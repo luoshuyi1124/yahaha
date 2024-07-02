@@ -9,7 +9,6 @@ public class test {
         System.out.println("Enter your Username: ");
         String input = scanner.nextLine();
         System.out.println("You are " + input);
-        scanner.close();
 
         int x = 10;
         int y = 20;
@@ -114,17 +113,51 @@ public class test {
 
         questions[0] = "what that fuck are you?";
         System.out.println(questions[0].length()); //things in an array can be easily changed
-        //note: arrays have a fixed size; for unfixed size, use ArrayList which is also not confined to one date type
+        //note: arrays have a fixed size; for unfixed size, use ArrayList which is also not confined to one data type
         
         System.out.println("---------- loops below");
 
     //loops
-        System.out.println("0");
-        System.out.println("0");
-        System.out.println("0");
-        System.out.println("0");
-        System.out.println("0");
-        System.out.println("0");
+        //fori
+        for(int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
 
+        for (int i = 0; i < questions.length; i++) {
+            System.out.println(questions[i]);
+            System.out.println(answers[i]);
+        }
+
+        //foreach
+        for(String question : questions) {
+            System.out.println(question);
+        }
+
+        //while loops
+        while(true) {
+            System.out.println("Do you want to continue?");
+            if(scanner.next().toLowerCase().equals("yes")) {
+                continue;
+            } else {
+                break;
+            }
+        }
+
+        System.out.println("----------- methods below");
+
+    //methods
+        outputQuestionsAndAnswersXTimes(3, questions, answers);
+
+        scanner.close();
+    }
+
+    public static void outputQuestionsAndAnswersXTimes (int x, String[] questions, String[] answers) { //inside parentheses are parameters
+        for (int y = 0; y < x; y++) {
+            for (int i = 0; i < questions.length; i++) { //questions and answers will stay redlined until they are added in the parameter
+                System.out.println(questions[i]);
+                System.out.println(answers[i]);
+            }
+            System.out.println("**********");
+        }
     }
 }
