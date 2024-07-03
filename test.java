@@ -144,6 +144,7 @@ public class test {
 
     //methods
         outputQuestionsAndAnswersXTimes(3, questions, answers);
+        System.out.println(sum(2, 34));
 
         scanner.close();
     }
@@ -162,5 +163,10 @@ public class test {
             System.out.println(answers[i]);
         }
         //note: this was extracted as a method via Refactor --> Extract to method
+    }
+
+    public static int sum(int x, int y) {
+        return x + y;
+        //REMEMBER: return != print
     }
 }
