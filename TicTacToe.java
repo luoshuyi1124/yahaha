@@ -5,12 +5,13 @@ public class TicTacToe {
  * documentation (do it next time)
  */
     public static void main(String[] args) {
+        //setting up variables and array to make the tictactoe board;
         String Empty = " placeholder ";
         String VertLine = "|";
         String[] array = new String[9];
         for (int i = 0; i < array.length; i++) {
             array[i] = String.valueOf(i + 1);
-        } //set-up variables and array to make the tictactoe board;
+        }
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Instructions: type a number from 1-9 to claim your space.");
@@ -64,37 +65,30 @@ public class TicTacToe {
 
     // winConditionDiagonal should check if the diagonals are all O or X
     public static boolean winConditionDiagonal(String[] array) {
-        // for every even index in the array...
-        for (int index = 0; index < 3; index+=2) {
-            if(index == 0) {
-                // check if array elements 0, 4, 8 are the same
-                if(array[index] == array[index + 4] && array[index] == array[index + 8]) {
-                    // check if the elements all hold X...
-                    if(array[index] == "X") {
-                        System.out.println("Winner is PlayerX");
-                        return true;
-                    }
-                    // or O
-                    else {
-                        System.out.println("Winner is PlayerO");
-                        return true;
-                    }
-                }
+        // check if array elements 0, 4, 8 are the same
+        if(array[0] == array[4] && array[0] == array[8]) {
+            // check if the elements all hold X...
+            if(array[0] == "X") {
+                System.out.println("Winner is PlayerX");
+                return true;
             }
+            // or O
             else {
-                // or check if array elements 2, 4, 6, are the same
-                if(array[index] == array[index + 2] && array[index] == array[index + 4]) {
-                    // check if the elements all hold X...
-                    if(array[index] == "X") {
-                        System.out.println("Winner is PlayerX");
-                        return true;
-                    }
-                    // or O
-                    else {
-                        System.out.println("Winner is PlayerO");
-                        return true;
-                    }
-                }
+                System.out.println("Winner is PlayerO");
+                return true;
+            }
+        }
+        // check if array elements 2, 4, 6, are the same
+        if(array[2] == array[4] && array[2] == array[6]) {
+            // check if the elements all hold X...
+            if(array[2] == "X") {
+                System.out.println("Winner is PlayerX");
+                return true;
+            }
+            // or O
+            else {
+                System.out.println("Winner is PlayerO");
+                return true;
             }
         }
         return false;
