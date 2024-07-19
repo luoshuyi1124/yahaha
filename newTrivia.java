@@ -22,7 +22,7 @@ public class newTrivia {
         answers[1] = "that's rough buddy";
         answers[2] = "i'm calling the police";
         answers[3] = "uh yeah i sure hope it does";
-        answers[4] = "omg she fuckin dead";
+        answers[4] = "omfg she fuckin dead";
 
         TheGame(UserInput, points, questions, answers);
         
